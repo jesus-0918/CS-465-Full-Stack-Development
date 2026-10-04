@@ -20,10 +20,9 @@ mongoose.connection.on('disconnected', () => {
 
 connect();
 
-const gracefulShutdown = (msg) => {
-  mongoose.connection.close().then(() => {
-    console.log(`Mongoose disconnected through ${msg}`);
-  });
+const gracefulShutdown = async (msg) => {
+  await mongoose.connection.close();
+  console.log(`Mongoose disconnected through ${msg}`);
 };
 
 process.once('SIGUSR2', () => {
