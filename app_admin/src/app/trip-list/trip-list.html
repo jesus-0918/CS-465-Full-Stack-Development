@@ -1,0 +1,5 @@
+<div class="trip-grid">
+  @for (trip of trips; track trip.code) {
+    <app-trip-card [trip]="trip"></app-trip-card>
+  }
+</div>

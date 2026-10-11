@@ -1,0 +1,27 @@
+/* Admin dashboard header */
+
+.admin-header {
+  padding: 24px 20px;
+  background-color: #17365d;
+  border-bottom: 4px solid #2d83c6;
+}
+
+.admin-header h1 {
+  color: white;
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.admin-header h2 {
+  color: #d6e9ff;
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
