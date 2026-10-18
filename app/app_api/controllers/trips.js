@@ -33,7 +33,19 @@ const tripsFindByCode = async (req, res) => {
         .json(trip);
 };
 
+const tripsAddTrip = async (req, res) => {
+  try {
+    const trip = await Trip.create(req.body);
+    return res.status(201).json(trip);
+  } catch (err) {
+    return res.status(400).json({
+      message: err.message
+    });
+  }
+};
+
 module.exports = {
-    tripsList,
-    tripsFindByCode
+  tripsList,
+  tripsFindByCode,
+  tripsAddTrip
 };

@@ -141,3 +141,15 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Module Seven - Ignore sensitive and generated files
+node_modules/
+.env
+.angular/
+dist/
+travlr.zip
